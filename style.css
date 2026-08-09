@@ -26,7 +26,8 @@ img{ max-width:100%; display:block; }
 .nav-link:hover{ color:var(--primary); }
 .hamburger{ display:inline-flex; }
 @media (min-width:900px){ .nav-links{ display:flex; } .hamburger{ display:none; } }
-.mobile-menu{ border-top:1px solid var(--line); background:var(--surface); padding:0.5rem 1.5rem 1.25rem; display:flex; flex-direction:column; }
+.mobile-menu{ display:none; flex-direction:column; border-top:1px solid var(--line); background:var(--surface); padding:0.5rem 1.5rem 1.25rem; }
+.mobile-menu:not([hidden]){ display:flex; }
 .mobile-menu a{ padding:0.8rem 0.15rem; font-weight:500; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); }
 
 /* Buttons */
