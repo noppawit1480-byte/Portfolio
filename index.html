@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>พอร์ตโฟลิโอ</title>
+<meta name="description" content="เว็บพอร์ตโฟลิโอส่วนตัว ประวัติการศึกษา ประสบการณ์ทำงาน ผลงาน และเกียรติบัตร" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="#home" class="brand"><span class="brand-dot"></span><span id="brandName">พอร์ตโฟลิโอ</span></a>
+      <nav class="nav-links">
+        <a href="#home" class="nav-link">หน้าแรก</a>
+        <a href="#skills" class="nav-link">ทักษะ</a>
+        <a href="#education" class="nav-link">การศึกษา</a>
+        <a href="#experience" class="nav-link">ประสบการณ์</a>
+        <a href="#portfolio" class="nav-link">ผลงาน</a>
+        <a href="#certificates" class="nav-link">เกียรติบัตร</a>
+        <a href="#contact" class="nav-link">ติดต่อ</a>
+      </nav>
+      <button class="icon-btn hamburger" id="menuToggle" aria-label="เมนู">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#home">หน้าแรก</a>
+      <a href="#skills">ทักษะ</a>
+      <a href="#education">การศึกษา</a>
+      <a href="#experience">ประสบการณ์</a>
+      <a href="#portfolio">ผลงาน</a>
+      <a href="#certificates">เกียรติบัตร</a>
+      <a href="#contact">ติดต่อ</a>
+    </div>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">PORTFOLIO</p>
+        <h1 class="hero-name" id="heroName">ชื่อ นามสกุล</h1>
+        <p class="hero-title" id="heroTitle">ตำแหน่ง / สาขา</p>
+        <p class="hero-bio" id="heroBio"></p>
+        <div class="hero-actions" id="heroActions"></div>
+        <div class="hero-meta" id="heroMeta"></div>
+      </div>
+      <div class="portrait-ring" id="portraitRing">
+        <div class="portrait-placeholder"><i data-lucide="user" style="width:54px;height:54px"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="section-header"><div><p class="eyebrow">SKILLS</p><h2 class="section-title">ทักษะ</h2></div></div>
+    <div id="skillsContainer"></div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="section-header"><div><p class="eyebrow">EDUCATION</p><h2 class="section-title">ประวัติการศึกษา</h2></div></div>
+    <div class="timeline" id="educationTimeline"></div>
+  </section>
+
+  <section id="experience" class="section section-alt">
+    <div class="section-header"><div><p class="eyebrow">EXPERIENCE</p><h2 class="section-title">ประสบการณ์ทำงาน / ฝึกงาน</h2></div></div>
+    <div class="timeline" id="experienceTimeline"></div>
+  </section>
+
+  <section id="portfolio" class="section">
+    <div class="section-header"><div><p class="eyebrow">PORTFOLIO</p><h2 class="section-title">ผลงาน</h2></div></div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <section id="certificates" class="section section-alt">
+    <div class="section-header"><div><p class="eyebrow">ACHIEVEMENTS</p><h2 class="section-title">เกียรติบัตรและรางวัล</h2></div></div>
+    <div class="filter-row" id="certFilters">
+      <button class="filter-pill filter-pill-active" data-filter="all">ทั้งหมด</button>
+      <button class="filter-pill" data-filter="certificate">เกียรติบัตร</button>
+      <button class="filter-pill" data-filter="award">รางวัล</button>
+    </div>
+    <div class="certificates-grid" id="certificatesGrid"></div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="section-header"><div><p class="eyebrow">GET IN TOUCH</p><h2 class="section-title">ช่องทางติดต่อ</h2></div></div>
+    <div class="contacts-grid" id="contactsGrid"></div>
+  </section>
+
+  <footer class="footer">
+    <p id="footerText">© <span id="year"></span> Portfolio</p>
+  </footer>
+
+  <!-- lucide icon set (same icons used in the design, no build step needed) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- แก้ไขข้อมูลของคุณใน data.js -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
