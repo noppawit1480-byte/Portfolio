@@ -38,42 +38,53 @@
   </header>
 
   <section id="home" class="hero-section">
+    <canvas id="networkBg" aria-hidden="true"></canvas>
     <div class="hero-grid">
       <div class="hero-content">
         <p class="eyebrow">PORTFOLIO</p>
         <h1 class="hero-name" id="heroName">ชื่อ นามสกุล</h1>
         <p class="hero-title" id="heroTitle">ตำแหน่ง / สาขา</p>
+        <p class="hero-typewriter"><span class="tw-prompt">&gt;</span> <span id="typewriterText"></span><span class="tw-cursor"></span></p>
         <p class="hero-bio" id="heroBio"></p>
         <div class="hero-actions" id="heroActions"></div>
         <div class="hero-meta" id="heroMeta"></div>
       </div>
-      <div class="portrait-ring" id="portraitRing">
-        <div class="portrait-placeholder"><i data-lucide="user" style="width:54px;height:54px"></i></div>
+      <div class="portrait-wrap">
+        <div class="portrait-ring" id="portraitRing">
+          <div class="portrait-placeholder"><i data-lucide="user" style="width:54px;height:54px"></i></div>
+        </div>
+        <div class="code-float-card" aria-hidden="true">
+          <div class="dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+          <div><span class="kw">const</span> engineer = {</div>
+          <div>&nbsp;&nbsp;stack: [<span class="str">'Python'</span>, <span class="str">'SQL'</span>],</div>
+          <div>&nbsp;&nbsp;<span class="fn">loves</span>: <span class="str">'data'</span>,</div>
+          <div>};</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="section section-alt">
+  <section id="skills" class="section section-alt reveal">
     <div class="section-header"><div><p class="eyebrow">SKILLS</p><h2 class="section-title">ทักษะ</h2></div></div>
     <div id="skillsContainer"></div>
   </section>
 
-  <section id="education" class="section">
+  <section id="education" class="section reveal">
     <div class="section-header"><div><p class="eyebrow">EDUCATION</p><h2 class="section-title">ประวัติการศึกษา</h2></div></div>
     <div class="timeline" id="educationTimeline"></div>
   </section>
 
-  <section id="experience" class="section section-alt">
+  <section id="experience" class="section section-alt reveal">
     <div class="section-header"><div><p class="eyebrow">EXPERIENCE</p><h2 class="section-title">ประสบการณ์ทำงาน / ฝึกงาน</h2></div></div>
     <div class="timeline" id="experienceTimeline"></div>
   </section>
 
-  <section id="portfolio" class="section">
+  <section id="portfolio" class="section reveal">
     <div class="section-header"><div><p class="eyebrow">PORTFOLIO</p><h2 class="section-title">ผลงาน</h2></div></div>
     <div class="projects-grid" id="projectsGrid"></div>
   </section>
 
-  <section id="certificates" class="section section-alt">
+  <section id="certificates" class="section section-alt reveal">
     <div class="section-header"><div><p class="eyebrow">ACHIEVEMENTS</p><h2 class="section-title">เกียรติบัตรและรางวัล</h2></div></div>
     <div class="filter-row" id="certFilters">
       <button class="filter-pill filter-pill-active" data-filter="all">ทั้งหมด</button>
@@ -83,7 +94,7 @@
     <div class="certificates-grid" id="certificatesGrid"></div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section reveal">
     <div class="section-header"><div><p class="eyebrow">GET IN TOUCH</p><h2 class="section-title">ช่องทางติดต่อ</h2></div></div>
     <div class="contacts-grid" id="contactsGrid"></div>
   </section>

@@ -237,5 +237,132 @@
     });
   });
 
+  /* ---------------- Typewriter (code-style rotating tagline) ---------------- */
+  function initTypewriter() {
+    var el = document.getElementById('typewriterText');
+    if (!el) return;
+    var phrases = (profile.taglines && profile.taglines.length) ? profile.taglines : [
+      'console.log("Hello, Recruiter \uD83D\uDC4B");',
+      'SELECT * FROM skills WHERE domain = "data";',
+      'building things with code & data',
+    ];
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) { el.textContent = phrases[0]; return; }
+
+    var phraseIndex = 0, charIndex = 0, deleting = false;
+    function tick() {
+      var current = phrases[phraseIndex];
+      if (!deleting) {
+        charIndex++;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(tick, 1600);
+          return;
+        }
+      } else {
+        charIndex--;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+      }
+      setTimeout(tick, deleting ? 30 : 60);
+    }
+    tick();
+  }
+
+  /* ---------------- Particle network background (hero) ---------------- */
+  function initNetworkBg() {
+    var canvas = document.getElementById('networkBg');
+    if (!canvas || !canvas.getContext) return;
+    var ctx = canvas.getContext('2d');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var dpr = window.devicePixelRatio || 1;
+    var cw, ch, particles;
+
+    function initParticles() {
+      var count = Math.max(18, Math.min(55, Math.floor((cw * ch) / 16000)));
+      particles = [];
+      for (var i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * cw,
+          y: Math.random() * ch,
+          vx: (Math.random() - 0.5) * 0.25,
+          vy: (Math.random() - 0.5) * 0.25,
+        });
+      }
+    }
+    function resize() {
+      var rect = canvas.parentElement.getBoundingClientRect();
+      cw = rect.width; ch = rect.height;
+      canvas.width = cw * dpr; canvas.height = ch * dpr;
+      canvas.style.width = cw + 'px'; canvas.style.height = ch + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      initParticles();
+    }
+    function draw() {
+      ctx.clearRect(0, 0, cw, ch);
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        if (!reduceMotion) {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > cw) p.vx *= -1;
+          if (p.y < 0 || p.y > ch) p.vy *= -1;
+        }
+      }
+      for (var i = 0; i < particles.length; i++) {
+        for (var j = i + 1; j < particles.length; j++) {
+          var a = particles[i], b = particles[j];
+          var dx = a.x - b.x, dy = a.y - b.y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.strokeStyle = 'rgba(35,99,163,' + (0.18 * (1 - dist / 120)) + ')';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+      for (var i = 0; i < particles.length; i++) {
+        ctx.fillStyle = 'rgba(35,99,163,0.55)';
+        ctx.beginPath();
+        ctx.arc(particles[i].x, particles[i].y, 1.8, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      if (!reduceMotion) requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+    draw();
+  }
+
+  /* ---------------- Scroll reveal ---------------- */
+  function initScrollReveal() {
+    var els = document.querySelectorAll('.reveal');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('reveal-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { observer.observe(el); });
+  }
+
+  initTypewriter();
+  initNetworkBg();
+  initScrollReveal();
+
   if (window.lucide) lucide.createIcons();
 })();
