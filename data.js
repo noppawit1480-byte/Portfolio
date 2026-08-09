@@ -73,6 +73,7 @@ const PORTFOLIO_DATA = {
       startDate: "2567",
       endDate: "2568",
       gpa: "4.00",
+      logoUrl: "images/logos/lanna-polytechnic.png",
       description: "",
     },
     {
@@ -82,6 +83,7 @@ const PORTFOLIO_DATA = {
       startDate: "2563",
       endDate: "2566",
       gpa: "3.93",
+      logoUrl: "images/logos/lanna-polytechnic.png",
       description: "",
     },
     {
@@ -91,6 +93,7 @@ const PORTFOLIO_DATA = {
       startDate: "2568", // ⚠ ปีที่เริ่มเรียนเป็นการประมาณจากบริบท (ต่อเนื่องจากปวส.ที่จบปี 2568) กรุณายืนยันปีจริงอีกครั้ง
       endDate: "ปัจจุบัน (กำลังศึกษาอยู่)",
       gpa: "3.67",
+      logoUrl: "images/logos/maejo-university.png",
       description: "",
     },
   ],
@@ -136,14 +139,13 @@ const PORTFOLIO_DATA = {
 
   // ---------- เกียรติบัตร / รางวัล ----------
   // type: "certificate" (เกียรติบัตร) หรือ "award" (รางวัล)
-  // ⚠ ใส่ imageUrl ให้แต่ละใบด้วยจะสวยกว่านี้มาก — อัปโหลดรูปเกียรติบัตรขึ้นโฟลเดอร์ images/ ในโปรเจกต์ แล้ววาง path ตรงนี้ เช่น "images/cert-report-repair.jpg"
   certificates: [
     {
       title: "ผ่านการฝึกประสบการณ์วิชาชีพ ระดับดีเยี่ยม",
       type: "certificate",
       issuer: "สำนักงานเขตพื้นที่การศึกษาประถมศึกษาเชียงใหม่ เขต 1",
       date: "31 ส.ค. 2567",
-      imageUrl: "",
+      imageUrl: "images/certificates/cert-internship-excellent.jpg",
       link: "",
     },
     {
@@ -151,7 +153,7 @@ const PORTFOLIO_DATA = {
       type: "certificate",
       issuer: "สำนักงานเขตพื้นที่การศึกษาประถมศึกษาเชียงใหม่ เขต 1",
       date: "31 ส.ค. 2567",
-      imageUrl: "",
+      imageUrl: "images/certificates/cert-report-repair-system.jpg",
       link: "",
     },
     {
@@ -160,7 +162,7 @@ const PORTFOLIO_DATA = {
       type: "certificate",
       issuer: "บริษัท สเปราติง เทค (ประเทศไทย) จำกัด ร่วมกับ สำนักบริหารและพัฒนาวิชาการ มหาวิทยาลัยแม่โจ้",
       date: "18 ม.ค. 2569",
-      imageUrl: "",
+      imageUrl: "images/certificates/cert-ai-automation-n8n.jpg",
       link: "",
     },
     {
@@ -168,7 +170,7 @@ const PORTFOLIO_DATA = {
       type: "certificate",
       issuer: "บริษัท สเปราติง เทค (ประเทศไทย) จำกัด ร่วมกับ สำนักบริหารและพัฒนาวิชาการ มหาวิทยาลัยแม่โจ้",
       date: "17 ม.ค. 2569",
-      imageUrl: "",
+      imageUrl: "images/certificates/cert-ai-automation-make.jpg",
       link: "",
     },
   ],
