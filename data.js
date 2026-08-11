@@ -3,7 +3,7 @@ const PORTFOLIO_DATA = {
   // ---------- ข้อมูลส่วนตัว ----------
   profile: {
     name: "นภวิท -",
-    title: "Backend Developer Intern | นักศึกษาสาขานวัตกรรมธุรกิจดิจิทัล",
+    title: "นักศึกษาสาขานวัตกรรมธุรกิจดิจิทัล",
     bio: "นักศึกษาชั้นปีที่ 4 สาขานวัตกรรมธุรกิจดิจิทัล (หลักสูตร 2 ปี) สนใจงานสาย Backend Development เป็นพิเศษ มีพื้นฐาน Node.js, Python และ SQL ทั้งการออกแบบฐานข้อมูล (MySQL) และการเชื่อมต่อ API กำลังมองหาโอกาสฝึกงานตำแหน่ง Backend Developer เพื่อฝึกฝนการสร้างระบบหลังบ้านจริงในสภาพแวดล้อมการทำงานจริง และพร้อมเรียนรู้เทคโนโลยีใหม่ ๆ อยู่เสมอ",
     photoUrl: "images/profile/img01.jpg",
     resumeUrl: "https://drive.google.com/file/d/1Sa3UOhYh7-IH_01sBbq-bmWW-D6Ub79T/view?usp=sharing",
@@ -13,8 +13,17 @@ const PORTFOLIO_DATA = {
 
     taglines: [
       'const role = "Backend Developer Intern";',
-      'app.post("/api/skills", (req, res) => res.send("ready to learn"));',
+      "พัฒนาระบบหลังบ้าน เปลี่ยนข้อมูลให้กลายเป็น API ที่มีประสิทธิภาพ",
+      'SELECT * FROM developer WHERE role = "Backend Intern";',
       "ออกแบบฐานข้อมูลและ API ด้วย Node.js, SQL",
+      '{"status": 200, "message": "Ready to handle your data"}',
+      "ออกแบบโครงสร้างฐานข้อมูล SQL และจัดการข้อมูลอย่างเป็นระบบ",
+      'await connectDatabase({ scalable: true, secure: true });',
+      "จัดการ Data และสร้างระบบ Automate Workflows อย่างไร้รอยต่อ",
+      'def optimize_backend(): return "Fast & Reliable"',
+      "สร้างรากฐานระบบที่มั่นคงด้วย Node.js และ Python",
+      'app.listen(port, () => console.log("Backend is running..."));',
+      "พร้อมเรียนรู้การจัดการ Cloud Database และการทำงานกับระบบจริง",
     ],
   },
   skills: [
@@ -116,12 +125,12 @@ const PORTFOLIO_DATA = {
     },
   ],
   // {
-  //   title: "ระบบแจ้งซ่อมคอมพิวเตอร์และเครือข่าย",
+  //   title: "",
   //   imageUrl: "",
-  //   repoUrl: "https://github.com/username/repo",
+  //   repoUrl: "",
   //   demoUrl: "",
-  //   tags: ["Node.js", "MySQL", "REST API"],
-  //   description: "ระบบหลังบ้านสำหรับรับแจ้งซ่อมอุปกรณ์คอมพิวเตอร์ พัฒนาระหว่างฝึกงานที่ สพป.เชียงใหม่ เขต 1",
+  //   tags: ["", "", ""],
+  //   description: "",
   // },
   projects: [],
 
