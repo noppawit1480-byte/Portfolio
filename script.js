@@ -49,8 +49,8 @@
   }
 
   /* ---------------- Hero ---------------- */
-  document.title = (profile.name ? profile.name + ' | ' : '') + 'พอร์ตโฟลิโอ';
-  document.getElementById('brandName').textContent = profile.name || 'พอร์ตโฟลิโอ';
+  document.title = (profile.name ? profile.name + ' | ' : '') + 'Portfolio';
+  document.getElementById('brandName').textContent = profile.name || 'Portfolio';
   document.getElementById('heroName').textContent = profile.name || 'ชื่อ นามสกุล';
   document.getElementById('heroTitle').textContent = profile.title || 'เพิ่มตำแหน่ง / สาขาที่เรียนของคุณ';
 
