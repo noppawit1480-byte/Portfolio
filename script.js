@@ -254,7 +254,7 @@
 
   /* ---------------- Footer ---------------- */
   document.getElementById('footerText').innerHTML =
-    '© <span>' + new Date().getFullYear() + '</span> ' + esc(profile.name || 'Portfolio') + ' · สร้างด้วยความตั้งใจ';
+    '© <span>' + new Date().getFullYear() + '</span> ' + ' · Portfolio'+ ' · Noppawit';
 
   /* ---------------- Lightbox (view certificate full-size) ---------------- */
   var lightbox = document.getElementById('lightbox');
