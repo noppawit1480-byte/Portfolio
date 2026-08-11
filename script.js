@@ -80,20 +80,26 @@
   }
 
   /* ---------------- Skills ---------------- */
+  function skillDots(rank) {
+    var d = '';
+    for (var i = 1; i <= 4; i++) d += '<span class="skill-dot' + (i <= rank ? ' skill-dot-filled' : '') + '"></span>';
+    return d;
+  }
   var skillsContainer = document.getElementById('skillsContainer');
   if (skills.length === 0) {
     skillsContainer.innerHTML = emptyState('ยังไม่มีข้อมูลทักษะ');
   } else {
-    var skillsHtml = '';
+    var levelOrder = ['เริ่มต้น', 'ปานกลาง', 'ชำนาญ', 'เชี่ยวชาญ'];
+    var skillsHtml = '<div class="skill-legend">' + levelOrder.map(function (level, idx) {
+      return '<span class="skill-legend-item"><span class="skill-dots">' + skillDots(idx + 1) + '</span> ' + level + '</span>';
+    }).join('') + '</div>';
     SKILL_CATEGORIES.forEach(function (cat) {
       var items = skills.filter(function (s) { return (s.category || SKILL_CATEGORIES[0]) === cat; });
       if (items.length === 0) return;
       skillsHtml += '<div class="skill-group"><h4 class="skill-group-title">' + esc(cat) + '</h4><div class="skill-chip-row">';
       items.forEach(function (s) {
         var rank = SKILL_LEVEL_RANK[s.level] || 1;
-        var dots = '';
-        for (var d = 1; d <= 4; d++) dots += '<span class="skill-dot' + (d <= rank ? ' skill-dot-filled' : '') + '"></span>';
-        skillsHtml += '<div class="skill-chip"><span class="skill-name">' + esc(s.name) + '</span><span class="skill-dots">' + dots + '</span></div>';
+        skillsHtml += '<div class="skill-chip" title="ระดับ: ' + esc(s.level || levelOrder[0]) + '"><span class="skill-name">' + esc(s.name) + '</span><span class="skill-dots">' + skillDots(rank) + '</span></div>';
       });
       skillsHtml += '</div></div>';
     });
