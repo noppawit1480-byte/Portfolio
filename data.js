@@ -5,12 +5,12 @@ const PORTFOLIO_DATA = {
     name: "นภวิท -",
     title: "Backend Developer Intern | นักศึกษาสาขานวัตกรรมธุรกิจดิจิทัล",
     bio: "นักศึกษาชั้นปีที่ 4 สาขานวัตกรรมธุรกิจดิจิทัล (หลักสูตร 2 ปี) สนใจงานสาย Backend Development เป็นพิเศษ มีพื้นฐาน Node.js, Python และ SQL ทั้งการออกแบบฐานข้อมูล (MySQL) และการเชื่อมต่อ API กำลังมองหาโอกาสฝึกงานตำแหน่ง Backend Developer เพื่อฝึกฝนการสร้างระบบหลังบ้านจริงในสภาพแวดล้อมการทำงานจริง และพร้อมเรียนรู้เทคโนโลยีใหม่ ๆ อยู่เสมอ",
-    photoUrl: "", // ⚠ ใส่ลิงก์รูปโปรไฟล์ (เช่น อัปโหลดใส่โฟลเดอร์ images/ ในโปรเจกต์นี้แล้วใช้ path แบบเดียวกับรูปเกียรติบัตรด้านล่าง)
-    resumeUrl: "", // ใส่ลิงก์ไฟล์ PDF เรซูเม่ของคุณ (เช่น อัปโหลดขึ้น Google Drive แบบเปิดดูได้ แล้ววางลิงก์ตรงนี้)
-    location: "อำเภอสันทราย จังหวัดเชียงใหม่", // ตั้งใจใส่แค่จังหวัด ไม่ใส่ที่อยู่เต็มเพื่อความเป็นส่วนตัว
+    photoUrl: "images/profile/img01.jpg",
+    resumeUrl: "https://drive.google.com/file/d/1Sa3UOhYh7-IH_01sBbq-bmWW-D6Ub79T/view?usp=sharing",
+    location: "อำเภอสันทราย จังหวัดเชียงใหม่",
     email: "noppawitsaelao@gmail.com",
     phone: "061-315-2693",
-    // ข้อความที่จะพิมพ์วนไปเรื่อย ๆ แบบเทอร์มินัลใต้ตำแหน่งงาน แก้/เพิ่ม/ลบได้ตามใจ
+
     taglines: [
       'const role = "Backend Developer Intern";',
       'app.post("/api/skills", (req, res) => res.send("ready to learn"));',
@@ -67,7 +67,7 @@ const PORTFOLIO_DATA = {
       school: "วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่",
       degree: "ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)",
       field: "เทคโนโลยีสารสนเทศ",
-      startDate: "2567",
+      startDate: "2566",
       endDate: "2568",
       gpa: "4.00",
       logoUrl: "images/logos/lanna-polytechnic.png",
@@ -171,6 +171,7 @@ const PORTFOLIO_DATA = {
     { platform: "instagram", label: "@wit_1480", url: "https://instagram.com/wit_1480" },
     { platform: "facebook", label: "Wit Noppawit", url: "https://www.facebook.com/wit1480/?locale=th_TH" },
     { platform: "github", label: "noppawit1480", url: "https://github.com/noppawit1480-byte" },
+    { platform: "discord", label: ".1480", url: "https://discord.com/channels/@me" },
   ],
 };
 
