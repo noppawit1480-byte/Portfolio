@@ -36,18 +36,18 @@ const PORTFOLIO_DATA = {
     { name: "C++", category: "ทักษะเทคนิค", level: "ปานกลาง" },
     { name: "C#", category: "ทักษะเทคนิค", level: "ปานกลาง" },
     { name: "React.js", category: "ทักษะเทคนิค", level: "ปานกลาง" },
-    { name: "Dart", category: "ทักษะเทคนิค", level: "ปานกลาง" },
-    { name: "Flutter", category: "ทักษะเทคนิค", level: "ปานกลาง" },
+    { name: "Dart", category: "ทักษะเทคนิค", level: "เริ่มต้น" },
+    { name: "Flutter", category: "ทักษะเทคนิค", level: "เริ่มต้น" },
     // Databases, API, Dev tools (เรียงให้เครื่องมือที่เกี่ยวกับ Backend ขึ้นก่อน)
     { name: "Supabase (PostgreSQL)", category: "เครื่องมือ", level: "ปานกลาง" },
     { name: "MySQL (XAMPP)", category: "เครื่องมือ", level: "ปานกลาง" },
     { name: "Postman", category: "เครื่องมือ", level: "ปานกลาง" },
     { name: "Git / GitHub", category: "เครื่องมือ", level: "ปานกลาง" },
-    { name: "Vercel", category: "เครื่องมือ", level: "ปานกลาง" },
+    { name: "Vercel", category: "เครื่องมือ", level: "เริ่มต้น" },
     { name: "Visual Studio Code", category: "เครื่องมือ", level: "ปานกลาง" },
-    { name: "n8n", category: "เครื่องมือ", level: "ปานกลาง" },
-    { name: "Make.com", category: "เครื่องมือ", level: "ปานกลาง" },
-    { name: "Airtable", category: "เครื่องมือ", level: "ปานกลาง" },
+    { name: "n8n", category: "เครื่องมือ", level: "เริ่มต้น" },
+    { name: "Make.com", category: "เครื่องมือ", level: "เริ่มต้น" },
+    { name: "Airtable", category: "เครื่องมือ", level: "เริ่มต้น" },
     { name: "Figma", category: "เครื่องมือ", level: "ปานกลาง" },
     // Languages
     { name: "ภาษาไทย", category: "ภาษา", level: "เชี่ยวชาญ" },
@@ -173,14 +173,13 @@ const PORTFOLIO_DATA = {
 
   // ---------- ช่องทางติดต่อ ----------
   contacts: [
-    { platform: "email", label: "", url: "mailto:noppawitsaelao@gmail.com" },
-    { platform: "phone", label: "เบอร์หลัก", url: "tel:0613152693" },
-    { platform: "phone", label: "เบอร์สำรอง", url: "tel:0623924608" },
+    { platform: "email", label: "email", url: "mailto:noppawitsaelao@gmail.com" },
+    { platform: "phone", label: "0613152693", url: "tel:0613152693" },
+    { platform: "phone", label: "0623924608", url: "tel:0623924608" },
     { platform: "line", label: "noppawti", url: "https://line.me/ti/p/~noppawti" },
     { platform: "instagram", label: "@wit_1480", url: "https://instagram.com/wit_1480" },
     { platform: "facebook", label: "Wit Noppawit", url: "https://www.facebook.com/wit1480/?locale=th_TH" },
     { platform: "github", label: "noppawit1480", url: "https://github.com/noppawit1480-byte" },
-    { platform: "discord", label: ".1480", url: "https://discord.com/channels/@me" },
   ],
 };
 
