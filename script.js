@@ -36,8 +36,6 @@
   function platformIcon(meta, size) {
     var s = size || 20;
     if (!meta.logo) return icon(meta.icon, s);
-    // Real brand logo via Simple Icons CDN, with automatic fallback to the generic
-    // Lucide icon if the logo fails to load (wrong slug, offline, CDN hiccup, etc.)
     return (
       '<img src="https://cdn.simpleicons.org/' + meta.logo + '/ffffff" alt="" width="' + s + '" height="' + s + '" ' +
       'onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'inline-flex\';" />' +
