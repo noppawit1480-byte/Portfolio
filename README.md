@@ -1,27 +1,43 @@
-# เว็บพอร์ตโฟลิโอ (สำหรับ GitHub Pages)
+# Portfolio — นภวิท
 
-เว็บพอร์ตโฟลิโอนี้เป็น **HTML/CSS/JS ล้วน** ไม่ต้อง build ไม่ต้องติดตั้งอะไรเลย
-เปิดไฟล์ `index.html` ในเบราว์เซอร์ได้ทันที และอัปขึ้น GitHub Pages ได้ฟรี
+เว็บพอร์ตโฟลิโอส่วนตัว นำเสนอประวัติการศึกษา ประสบการณ์ฝึกงาน ทักษะ ผลงาน และเกียรติบัตร ของนักศึกษาสาขานวัตกรรมธุรกิจดิจิทัลที่สนใจงานสาย **Backend Development**
 
-## โครงสร้างไฟล์
+**🔗 เว็บไซต์:** https://noppawit1480-byte.github.io/Portfolio/
+
+## ภาพรวมโปรเจกต์
+
+เว็บไซต์นี้พัฒนาด้วย HTML, CSS และ JavaScript ล้วน (Vanilla JS) โดยตั้งใจไม่พึ่งพา framework หรือ build tool เพื่อให้ deploy ผ่าน GitHub Pages ได้โดยตรงและโหลดเร็ว โครงสร้างข้อมูล (`data.js`) แยกออกจากตรรกะการแสดงผล (`script.js`) อย่างชัดเจน ทำให้อัปเดตเนื้อหาได้โดยไม่ต้องแก้โค้ดส่วนแสดงผล
+
+### ฟีเจอร์
+- ออกแบบ responsive รองรับทุกขนาดหน้าจอ (มือถือ แท็บเล็ต เดสก์ท็อป)
+- Interactive: scroll-reveal animation, typewriter effect, particle-network background, lightbox แสดงรูปเกียรติบัตรแบบเต็ม
+- รองรับการตั้งค่า `prefers-reduced-motion` เพื่อการเข้าถึงที่ดีขึ้น
+- ไม่มี dependency ภายนอกนอกจากชุดไอคอน (โหลดผ่าน CDN)
+
+### เทคโนโลยีที่ใช้
+`HTML5` · `CSS3 (Custom Properties, Grid, Flexbox)` · `JavaScript (Vanilla)` · `Lucide Icons` · `Simple Icons`
+
+### โครงสร้างไฟล์
 
 ```
 portfolio-github/
-├── index.html      โครงหน้าเว็บ (ไม่ต้องแก้)
-├── style.css        ธีม/สี/ดีไซน์ (แก้ได้ถ้าอยากปรับสี ฟอนต์)
-├── script.js        ตัวดึงข้อมูลจาก data.js มาแสดงผล (ไม่ต้องแก้)
-├── data.js          ★ ไฟล์ที่คุณต้องแก้ทุกครั้งที่อยากอัปเดตข้อมูล ★
+├── index.html      โครงหน้าเว็บ
+├── style.css        ธีม สี ดีไซน์
+├── script.js        ตรรกะดึงข้อมูลจาก data.js มาแสดงผล
+├── data.js          ข้อมูลเนื้อหาทั้งหมดของเว็บไซต์
 └── images/
-    ├── certificates/   รูปเกียรติบัตร (คลิกที่การ์ดเกียรติบัตรในเว็บเพื่อดูรูปเต็ม)
+    ├── certificates/   รูปเกียรติบัตร
     └── logos/          โลโก้สถาบันการศึกษา
 ```
 
-เพิ่มรูปใหม่ได้โดยวางไฟล์ในโฟลเดอร์ `images/certificates/` หรือ `images/logos/` แล้วอ้างอิง path นั้นในช่อง `imageUrl` หรือ `logoUrl` ของ `data.js` เช่น `"images/certificates/ชื่อไฟล์.jpg"`
+---
 
-## 1. แก้ไขข้อมูลของคุณ
+## สำหรับเจ้าของเว็บไซต์: วิธีแก้ไขข้อมูล
+
+### 1. แก้ไขข้อมูล
 
 เปิดไฟล์ **`data.js`** ด้วยโปรแกรมแก้ไขข้อความ (เช่น VS Code, Notepad) แล้วแก้ค่าต่าง ๆ
-ในนั้นตามคอมเมนต์ที่กำกับไว้ — มีตัวอย่างข้อมูลให้ดูเป็นแนวทางอยู่แล้ว ได้แก่
+ในนั้นตามคอมเมนต์ที่กำกับไว้ ได้แก่
 
 - `profile` — ชื่อ ตำแหน่ง ประวัติย่อ รูปโปรไฟล์ ลิงก์เรซูเม่ ข้อมูลติดต่อ
 - `skills` — ทักษะ พร้อมหมวดหมู่และระดับความชำนาญ
@@ -35,39 +51,18 @@ portfolio-github/
 เช่น อัปโหลดรูปขึ้น GitHub เอง (ในโฟลเดอร์ `images/`) แล้วใช้ลิงก์ `images/ชื่อไฟล์.jpg`
 หรือใช้ลิงก์จาก Google Drive / Imgur ก็ได้
 
-## 2. ทดสอบดูก่อนอัป
+### 2. ทดสอบดูก่อนอัป
 
 ดับเบิลคลิกเปิดไฟล์ `index.html` ในเบราว์เซอร์ได้เลย ไม่ต้องมีเซิร์ฟเวอร์ใด ๆ
 ถ้าข้อมูลถูกต้อง หน้าเว็บจะอัปเดตตามที่แก้ใน `data.js` ทันที
 
-## 3. อัปขึ้น GitHub Pages (ฟรี)
+### 3. อัปเดตขึ้น GitHub Pages
 
-1. สร้างบัญชี GitHub (ถ้ายังไม่มี) ที่ https://github.com
-2. สร้าง repository ใหม่ (New repository)
-   - แนะนำตั้งชื่อว่า `username-portfolio` (แทน username ด้วยชื่อผู้ใช้ของคุณ) — หรือถ้าอยากได้ลิงก์สั้นสุด (`username.github.io`) ให้ตั้งชื่อ repo เป็น `username.github.io` เป๊ะ ๆ
-   - เลือก Public
-3. อัปโหลดไฟล์ทั้งหมดในโฟลเดอร์นี้ (`index.html`, `style.css`, `script.js`, `data.js`) เข้า repo
-   - อัปผ่านหน้าเว็บ GitHub ได้เลย (ปุ่ม "Add file" → "Upload files") หรือใช้คำสั่ง:
-     ```bash
-     git init
-     git add .
-     git commit -m "เพิ่มเว็บพอร์ตโฟลิโอ"
-     git branch -M main
-     git remote add origin https://github.com/username/username-portfolio.git
-     git push -u origin main
-     ```
-4. เข้าไปที่ repo → Settings → Pages
-5. ในหัวข้อ "Build and deployment" เลือก Source เป็น **Deploy from a branch**
-   เลือก Branch เป็น `main` โฟลเดอร์ `/ (root)` แล้วกด Save
-6. รอประมาณ 1-2 นาที จะได้ลิงก์เว็บที่ `https://username.github.io/username-portfolio/`
-   (หรือ `https://username.github.io/` ถ้าตั้งชื่อ repo แบบนั้น)
-
-## 4. อัปเดตข้อมูลในอนาคต
-
-ทุกครั้งที่อยากแก้ข้อมูล แค่แก้ไฟล์ `data.js` แล้ว commit + push ขึ้น GitHub ใหม่
+แก้ไฟล์ `data.js` (หรือไฟล์อื่น) แล้ว commit + push ขึ้น repo นี้ตามปกติ
 เว็บจะอัปเดตให้อัตโนมัติภายในไม่กี่นาที ไม่ต้องตั้งค่า Pages ซ้ำ
 
----
-
-ลิงก์ที่ได้จากขั้นตอนนี้เอาไปใส่ในเรซูเม่ ส่งให้ฝ่ายบุคคล หรือแปะใน LinkedIn ได้เลยครับ
-ใช้งานฟรีตลอดกาล ไม่ผูกกับแผนหรือบัญชีของ Claude ใด ๆ ทั้งสิ้น
+```bash
+git add .
+git commit -m "อัปเดตข้อมูลพอร์ตโฟลิโอ"
+git push
+```
